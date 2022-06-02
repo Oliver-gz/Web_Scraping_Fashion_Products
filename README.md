@@ -11,6 +11,8 @@ We can treat the website as **3 levels**: home page, product page and detail pag
 - **Product page**: overviews of proudcts in one category, like name and price
 - **Detail page**: detailed information of one product, including size, color, inventory, description, fabric, etc
 
+<img src="images/website pages.png" width="1000" height="200">
+
 ### Database Structure
 **Rows**: Each row represents **one sku**, which means a product with specific color and size. This allows us to track the invertory information for each sku. 
 
@@ -31,3 +33,7 @@ sustainability (str) [a brief description of product sustainability]
 recycle (str) [a brief description of product recycle]
 scrapped_date (date)
 ```
+# Scraping Test and Data Storage
+One page of "Men" products are scraped as a test. The data is stored in both **local database** and **AWS RDS**.
+
+<img src="images/AWS RDS & Local DB.png" width="600" height="200">
