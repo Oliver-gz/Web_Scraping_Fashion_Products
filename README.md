@@ -16,12 +16,16 @@ Although there is a tab called "For All", it is a subset of all the products, so
 <img src="images/website pages.png" width="1200" height="200">
 
 ### Scraping Flow
-The overall scraping flow is as follows. 
+The overall workflow is as follows. 
 
 <img src="images/Scraping Flow.png" width="500" height="400">
 
-# Scraping Test and Data Storage
-One page of "Men" products are scraped as a test. The data is stored in both **local database** and **AWS RDS**.
+For the web scraping part, both Selenium and bs4 are needed since there are some JavaScript codes in the website, some data is dynamic or hidden. We can scrape the source page first using Selenium, then load it into BeautifulSoup for further analysis. Each data record represents one sku, which means a product with specific color and size. This allows us to store the invertory information. 
+
+For the data storage and update part, we can use [product_id, color, size] as primary key. Some update examples: product name change, price change, inventory change.
+
+# Scraping Test
+Here one page of "Men" products is scraped as a test. This page covers many special cases, e.g. products with a discount, products without colors or sizes, skus that are sold out, products lack of some information. Data is stored in both **local database** and **AWS RDS**.
 
 <img src="images/AWS RDS & Local DB.png" width="600" height="200">
 
