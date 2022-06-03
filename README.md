@@ -13,7 +13,7 @@ We can treat the website as **3 levels**: home page, product page and detail pag
 
 Although there is a tab called "For All", it is a subset of all the products, so we had better scrape the 3 categories respectively for the whole website.
 
-<img src="images/website pages.png" width="1200" height="200">
+<img src="images/website pages.png" width="800" height="160">
 
 ### Scraping Flow
 The overall workflow is as follows. 
