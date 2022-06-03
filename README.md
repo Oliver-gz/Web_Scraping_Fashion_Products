@@ -4,14 +4,21 @@
 
 # Scraping Strategy
 ### About the Website
-There are generally **3 product categories**: Women, Men and Baby + Kids. Although there is a tab called "For All", it is a subset of all the products, so we had better scrape the 3 categories respectively for the whole website.
+
 
 We can treat the website as **3 levels**: home page, product page and detail page. 
-- **Home page**: 3 product genders
+- **Home page**: 3 product categories [Men, Women, Kids]
 - **Product page**: overviews of proudcts in one category, like name and price
-- **Detail page**: detailed information of one product, including size, color, inventory, description, fabric, etc
+- **Detail page**: detailed information of one product, including size, color, description, fabric, etc
 
-<img src="images/website pages.png" width="1000" height="200">
+Although there is a tab called "For All", it is a subset of all the products, so we had better scrape the 3 categories respectively for the whole website.
+
+<img src="images/website pages.png" width="1200" height="200">
+
+### Scraping Flow
+The overall scraping flow is as follows. 
+
+<img src="images/Scraping Flow.png" width="500" height="400">
 
 # Scraping Test and Data Storage
 One page of "Men" products are scraped as a test. The data is stored in both **local database** and **AWS RDS**.
@@ -23,6 +30,7 @@ One page of "Men" products are scraped as a test. The data is stored in both **l
 
 **Fields**:
 ```
+product_id (str)
 display_name (str)
 color (str)
 size (str)
