@@ -50,3 +50,6 @@ sustainability (str) [a brief description of product sustainability]
 recycle (str) [a brief description of product recycle]
 scrapped_date (date)
 ```
+# Future Work
+- Scrape the whole website and check data quality.
+- Deploy the scraper using AWS dockers.
