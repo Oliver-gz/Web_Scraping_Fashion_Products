@@ -51,5 +51,6 @@ recycle (str) [a brief description of product recycle]
 scrapped_date (date)
 ```
 # Future Work
+- Scrape more fields like image links and low-level categories.
 - Scrape the whole website and check data quality.
 - Deploy the scraper using AWS dockers.
